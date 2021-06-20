@@ -9,7 +9,7 @@
  
   <name>JacocoExample</name>
   <url>http://maven.apache.org</url>
-
+   
   <properties>
     <maven.compiler.source>1.6</maven.compiler.source>
    <maven.compiler.target>1.6</maven.compiler.target>
@@ -26,14 +26,14 @@
   </dependencies>
   <build>
   	<plugins>
-        <plugin>
-            <groupId>org.openclover</groupId>
-            <artifactId>clover-maven-plugin</artifactId>
-          <configuration>
+  		<plugin>
+        <groupId>com.atlassian.maven.plugins</groupId>
+        <artifactId>clover-maven-plugin</artifactId>
+        <configuration>
           <generatePdf>true</generatePdf>
           <generateXml>true</generateXml>
-          <generateHtml>true</generateHtml>
-          <generateJson>true</generateJson>
+          <generateHtml>false</generateHtml>
+          <generateJson>false</generateJson>
         </configuration>
         <executions>
           <execution>
@@ -43,7 +43,7 @@
             </goals>
           </execution>
         </executions>
-        </plugin>
-    </plugins>
-</build>
+      </plugin>
+  	</plugins>
+  </build>
 </project>
