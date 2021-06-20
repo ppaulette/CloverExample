@@ -25,24 +25,23 @@
   <build>
   	<plugins>
   		<plugin>
-    <groupId>org.jacoco</groupId>
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <version>0.7.7.201606060606</version>
-    <executions>
-        <execution>
+        <groupId>com.atlassian.maven.plugins</groupId>
+        <artifactId>clover-maven-plugin</artifactId>
+        <configuration>
+          <generatePdf>true</generatePdf>
+          <generateXml>true</generateXml>
+          <generateHtml>false</generateHtml>
+          <generateJson>false</generateJson>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
             <goals>
-                <goal>prepare-agent</goal>
+              <goal>instrument</goal>
             </goals>
-        </execution>
-        <execution>
-            <id>report</id>
-            <phase>prepare-package</phase>
-            <goals>
-                <goal>report</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
+          </execution>
+        </executions>
+      </plugin>
   	</plugins>
   </build>
 </project>
