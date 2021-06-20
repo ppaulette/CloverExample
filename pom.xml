@@ -24,8 +24,6 @@
   </dependencies>
   <build>
   	<plugins>
-      <build>
-    <plugins>
         <plugin>
             <groupId>org.openclover</groupId>
             <artifactId>clover-maven-plugin</artifactId>
