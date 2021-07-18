@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.training.example</groupId>
-  <artifactId>JacocoExample</artifactId>
+  <artifactId>CloverExample</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
  
-  <name>JacocoExample</name>
+  <name>CloverExample</name>
   <url>http://maven.apache.org</url>
    
   <properties>
@@ -26,6 +26,22 @@
   </dependencies>
   <build>
   	<plugins>
+      <plugin>
+        <!-- Build an executable JAR -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.0.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>lib/</classpathPrefix>
+              <mainClass>com.mycompany.app.App</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
   		<plugin>
         <groupId>org.openclover</groupId>
         <artifactId>clover-maven-plugin</artifactId>
