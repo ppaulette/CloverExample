@@ -47,8 +47,8 @@
         <configuration>
           <generatePdf>true</generatePdf>
           <generateXml>true</generateXml>
-          <generateHtml>false</generateHtml>
-          <generateJson>false</generateJson>
+          <generateHtml>true</generateHtml>
+          <generateJson>true</generateJson>
         </configuration>
         <executions>
           <execution>
