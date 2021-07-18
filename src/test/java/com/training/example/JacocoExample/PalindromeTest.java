@@ -10,6 +10,6 @@ public class PalindromeTest {
 	public void whenEmptyString_thenAccept() {
 	    Palindrome palindromeTester = new Palindrome();
 	    assertTrue(palindromeTester.isPalindrome(""));
-	    assertTrue(palindromeTester.isPalindrome("New"));
+	    assertTrue(palindromeTester.isPalindrome("NON"));
 	}
 }
